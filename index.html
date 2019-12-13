@@ -35,10 +35,18 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 75px;
       background: rgba(0, 0, 0, 0.7);
       padding: 35px 45px;
       color: white;
+      text-align: center;
+    }
+
+    #how-long-title {
+      font-size: 45px;
+    }
+
+    #how-long-text {
+      font-size: 75px;
     }
   </style>
 
@@ -48,6 +56,9 @@
 
   <div id="contents">
     <div id="how-long">
+      <div id="how-long-title">How long until Red Rocks?</div>
+      <div id="how-long-text">
+      </div>
     </div>
   </div>
 
@@ -57,7 +68,7 @@
       const today = new Date();
       const redRock = new Date("2020-03-19");
       const delta = redRock - today;
-      document.getElementById("how-long").innerHTML = humanizeDuration(delta, { units: ["w", "d"], round: true });
+      document.getElementById("how-long-text").innerHTML = humanizeDuration(delta, { units: ["w", "d"], round: true });
     })();
   </script>
 
